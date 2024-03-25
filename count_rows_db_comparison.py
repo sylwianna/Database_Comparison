@@ -1,3 +1,4 @@
+import os, glob
 import psycopg2
 import mysql.connector
 import pandas as pds
@@ -51,8 +52,9 @@ def count_rows(dbms,db_params,input_df,header_labels):
 
     return results_df
 
-# Set input file with lists of tables to search
-input_file = "##CHANGEME##.xlsx"
+# Set input file with lists of tables to search, as an example model_tables.xlsx
+cwd = os.getcwd().replace('\\','\\\\')
+input_file = glob.glob(f'{cwd}\\model_tables.xlsx')[0]
 
 # Read the XLSX file into a DataFrame
 model_tables = pds.read_excel(input_file)
