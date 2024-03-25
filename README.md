@@ -1,2 +1,2 @@
-# Database_Comparison
-![please replace with alt](https://img.shields.io/badge/anytext-youlike-blue)
+# Database Comparison
+Compare number of records in tables in different databases.
